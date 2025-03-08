@@ -14,7 +14,7 @@ def download_clicked():
         message='download button clicked!'
     )
 
-download_icon= tk.PhotoImage(file='./unnamed.png')
+download_icon= tk.PhotoImage(file='/unnamed.png')
 
 download_button=ttk.Button(
    root,
