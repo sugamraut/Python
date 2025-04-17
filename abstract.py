@@ -32,3 +32,7 @@ class hourlyEmoploye(Employee):
 e1=FulltimeEmployee("jhon","Doe",6000)
 e2=hourlyEmoploye("jhon","Doe",6000)
 print(e1)
+
+
+
+

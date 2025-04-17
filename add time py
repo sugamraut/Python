@@ -1,0 +1,25 @@
+class Time:
+    def __init__(self, hrs, mins, sec):
+        self.hrs = hrs
+        self.mins = mins
+        self.sec = sec
+
+    def __add__(self, other):
+        total_sec = self.sec + other.sec
+        extra_min, sec = divmod(total_sec, 60)
+        
+        total_min = self.mins + other.mins + extra_min
+        extra_hrs, mins = divmod(total_min, 60)
+        
+        hrs = self.hrs + other.hrs + extra_hrs
+        
+        return Time(hrs, mins, sec)
+
+    def __str__(self):
+        return f"{self.hrs} hrs {self.mins} mins {self.sec} sec"
+
+# Example Usage
+time1 = Time(2, 45, 50)
+time2 = Time(1, 20, 30)
+result = time1 + time2
+print("Total Time:", result)
